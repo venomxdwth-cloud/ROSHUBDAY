@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday, Love!</title>
+  <title>Happy Birthday ROSHU~ 💗✨</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -35,11 +35,41 @@
       border-left: 3px solid #ff69b4;
       padding-left: 20px;
     }
-    .event {
-      margin-bottom: 40px;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: 0.6s ease;
+    .chat {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+.msg {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 16px;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+.msg.her {
+  align-self: flex-start;
+  background: #ffe4ec;
+  animation-delay: 0.3s;
+}
+.msg.you {
+  align-self: flex-end;
+  background: #d1f7c4;
+  animation-delay: 0.6s;
+}
+.msg:nth-child(3) { animation-delay: 0.9s; }
+.msg:nth-child(4) { animation-delay: 1.2s; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
     }
     .event.visible {
       opacity: 1;
@@ -75,14 +105,23 @@
 </head>
 <body>
   <header>
-    <h1>Happy Birthday, My Love 🎂</h1>
-    <p>This is our little journey together 💖</p>
+    <h1>Happy Birthday ROSHU~ 💗✨</h1>
+    <p>My ray of light 💫</p>
   </header>
 
   <section class="timeline">
     <div class="event">
-      <h3>💘 The Day We Met</h3>
-      <p>That one moment changed everything for me.</p>
+      <h3>💘 25 February 2023,8:00 PM</h3>
+      <p><div class="event chat-box">
+  <h3>💬 Our First Chat</h3>
+  <div class="chat">
+    <div class="msg her">Hi</div>
+    <div class="msg you">Hey</div>
+    <div class="msg her">Will you be my bf?</div>
+    <div class="msg you">...</div>
+  </div>
+</div>
+    </p>
     </div>
     <div class="event">
       <h3>🌃 Our First Late Night Talk</h3>
