@@ -263,7 +263,7 @@
     if (i < message.length) {
       document.getElementById("typewriter").innerHTML += message.charAt(i);
       i++;
-      setTimeout(type, 60);
+      setTimeout(type, 45);
     }
   }
   window.onload = type;
@@ -288,6 +288,10 @@
     "You are you!"
   ];
   let index = 0;
+<div style="text-align: center; margin-top: 40px;">
+  <button onclick="showLoveReason()" style="padding: 10px 20px; border-radius: 12px; background-color: #ff69b4; color: white; font-size: 1rem; border: none;">Why I Love You 💗</button>
+  <p id="reason-box" style="margin-top: 20px; font-size: 1.2rem; font-family: 'Comic Sans MS', cursive; color: #d63384;"></p>
+</div>
 
   function showLoveReason() {
     if (index < reasons.length) {
