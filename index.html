@@ -271,6 +271,32 @@
 
     </p>
   </section>
+<button onclick="showLoveReason()">Why I Love You 💗</button>
+<p id="reason-box"></p>
+
+<script>
+  const reasons = [
+    "You are OSHU BAVY~",
+    "You gimme kissiez~",
+    "You are a shawty~",
+    "Your cheekies are soffff~",
+    "You're my mumma~",
+    "You make me do gwenchana~",
+    "DINGDINGDINGDING",
+    "You are a cootie patootie",
+    "You are mine~",
+    "You are you!"
+  ];
+  let index = 0;
+
+  function showLoveReason() {
+    if (index < reasons.length) {
+      document.getElementById("reason-box").innerText = reasons[index++];
+    } else {
+      document.getElementById("reason-box").innerText = "I can go on forever... ❤️";
+    }
+  }
+</script>
 
   <footer>
     Made with ❤️ by Roshni's DEV~
