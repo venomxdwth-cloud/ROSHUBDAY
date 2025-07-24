@@ -25,6 +25,7 @@
       font-family: 'Great Vibes', cursive;
       font-size: 56px;
       margin: 0;
+      text-shadow: 2px 2px #fff;
     }
     header p {
       font-size: 20px;
@@ -40,11 +41,15 @@
       margin-bottom: 40px;
     }
     .timeline {
-      border-left: 3px solid #ff69b4;
-      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
     .event {
-      margin-bottom: 40px;
+      background: #fff0f5;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
       opacity: 0;
       transform: translateY(30px);
       transition: 0.6s ease;
@@ -57,6 +62,8 @@
       margin: 0 0 10px;
       color: #d6336c;
       font-weight: 600;
+      font-size: 22px;
+      font-family: 'Great Vibes', cursive;
     }
     .event p {
       margin: 0;
@@ -120,35 +127,31 @@
       }
     }
 
-    .heart {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: #ff69b4;
-      transform: rotate(45deg);
-      animation: float 8s linear infinite;
-      opacity: 0.6;
+    .audio-player {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      border-radius: 30px;
+      padding: 10px 20px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
     }
-    .heart::before,
-    .heart::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: #ff69b4;
-      border-radius: 50%;
+    .bar {
+      width: 4px;
+      height: 10px;
+      background: #d6336c;
+      animation: bounce 1s infinite ease-in-out;
     }
-    .heart::before {
-      top: -10px;
-      left: 0;
-    }
-    .heart::after {
-      left: -10px;
-      top: 0;
-    }
-    @keyframes float {
-      0% { transform: translateY(0) rotate(45deg); }
-      100% { transform: translateY(-100vh) rotate(45deg); }
+    .bar:nth-child(1) { animation-delay: 0s; }
+    .bar:nth-child(2) { animation-delay: 0.2s; }
+    .bar:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce {
+      0%, 100% { transform: scaleY(1); }
+      50% { transform: scaleY(1.8); }
     }
   </style>
 </head>
@@ -157,6 +160,15 @@
     <h1>Happy Birthday, My Love 🎂</h1>
     <p>This is our little journey together 💖</p>
   </header>
+
+  <div class="audio-player">
+    <div style="display:flex; gap:4px;">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <span>Perfect - Ed Sheeran</span>
+  </div>
 
   <section class="timeline">
     <div class="event chat-box">
@@ -179,7 +191,7 @@
   </section>
 
   <section>
-    <h2 style="text-align:center; color:#d6336c;">Our Moments</h2>
+    <h2 style="text-align:center; color:#d6336c; font-family:'Great Vibes', cursive; font-size:32px; text-shadow:1px 1px #fff;">Our Moments</h2>
     <div class="gallery">
       <img src="photo1.jpg" alt="">
       <img src="photo2.jpg" alt="">
@@ -188,7 +200,7 @@
   </section>
 
   <section>
-    <h2 style="text-align:center; color:#d6336c;">A Letter for You</h2>
+    <h2 style="text-align:center; color:#d6336c; font-family:'Great Vibes', cursive; font-size:32px; text-shadow:1px 1px #fff;">A Letter for You</h2>
     <p style="font-size: 18px; text-align: center; max-width: 600px; margin: auto;">
       You make my world brighter, my days happier, and my heart fuller. Thank you for being the light of my life.
       Here's to many more birthdays together. I love you 💗
@@ -199,10 +211,8 @@
     Made with ❤️ by Devansh
   </footer>
 
-  <!-- Autoplay YouTube Embed -->
   <iframe width="0" height="0" src="https://www.youtube.com/embed/sElE_BfQ67s?autoplay=1&loop=1&playlist=sElE_BfQ67s" frameborder="0" allow="autoplay" allowfullscreen style="display:none;"></iframe>
 
-  <!-- Floating hearts -->
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -212,17 +222,6 @@
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.event').forEach(el => observer.observe(el));
-
-    // Floating hearts
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.className = 'heart';
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = (6 + Math.random() * 4) + 's';
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 8000);
-    }
-    setInterval(createHeart, 300);
   </script>
 </body>
 </html>
