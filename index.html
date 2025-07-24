@@ -255,19 +255,20 @@
   <section>
     <h2 style="text-align:center; color:#d6336c; font-family:'Great Vibes', cursive; font-size:32px; text-shadow:1px 1px #fff;">मेरी प्यारी रौशनी ~</h2>
     <p style="font-size: 18px; text-align: center; max-width: 600px; margin: auto;">
-     Happy Birthday Roshni ❤️
-      I know you must be smiling rn and my beautiful woman must be happy to experience all of this,
-      Ksm se boht mehnat lagi h sab kuch design krne mein , i have made this website from scratch , 
-      from absolute zero. NO template,no source code...nothing! So i just hope it turns out well to you.
-      Hnji roshu ji? Kaisi hai aap?
-      Blush he kar rhi hongi ,karni bhi chahiye..teesra birthday jo mana rahi mere saath but ek dukh ki baat
-      hai,next year se hum nahi mana payenge aise :( 
-      ab aap bagal mein rhengi to mai kaise apko paras likhunga hm? Tb to kevl aapko tightly hug krke kahunga
-      HAPPY BIRTHDAY ROSHU~
-      tb to kevl aapko kissies de paunga aur tbto aapko boht sara comfort de paunga...hmmm~~
-      but filhal ke liye isse he kaam chala lijiyega,zyada kch kr nahi paya mai ik but i promise,
-      next year pkka isse kai guna krunga hehe
-      aapke liye maine pure dil se wo letter likha tha and i want ki aap use dobara pdhe. I LOVE YOU 💕
+     <div id="typewriter" style="font-family: cursive;"></div>
+<script>
+  const message = "Happy Birthday Roshni ❤️ I know you must be smiling rn and my beautiful woman must be happy to experience all of this, Ksm se boht mehnat lagi h sab kuch design krne mein , i have made this website from scratch , from absolute zero. NO template,no source code...nothing! So i just hope it turns out well to you. Hnji roshu ji? Kaisi hai aap? Blush he kar rhi hongi ,karni bhi chahiye..teesra birthday jo mana rahi mere saath but ek dukh ki baat hai,next year se hum nahi mana payenge aise :( ab aap bagal mein rhengi to mai kaise apko paras likhunga hm? Tb to kevl aapko tightly hug krke kahunga HAPPY BIRTHDAY ROSHU~ tb to kevl aapko kissies de paunga aur tbto aapko boht sara comfort de paunga...hmmm~~ but filhal ke liye isse he kaam chala lijiyega,zyada kch kr nahi paya mai ik but i promise, next year pkka isse kai guna krunga hehe aapke liye maine pure dil se wo letter likha tha and i want ki aap use dobara pdhe. I LOVE YOU 💕";
+  let i = 0;
+  function type() {
+    if (i < message.length) {
+      document.getElementById("typewriter").innerHTML += message.charAt(i);
+      i++;
+      setTimeout(type, 60);
+    }
+  }
+  window.onload = type;
+</script>
+
     </p>
   </section>
 
