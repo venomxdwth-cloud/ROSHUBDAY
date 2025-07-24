@@ -212,21 +212,16 @@
   <iframe width="0" height="0" src="https://youtu.be/sElE_BfQ67s?si=CbPMQz8r-yKwHTMS" frameborder="0" allow="autoplay" allowfullscreen style="display:none;"></iframe>
 <!-- Your existing content -->
 
-<audio id="bg-music" autoplay loop>
-  <source src="apocalypse.mp3" type="audio/mp3">
-  Your browser does not support the audio tag.
-</audio>
+  <!-- other HTML -->
 
-<script>
-  window.addEventListener('click', () => {
-    const audio = document.getElementById('bg-music');
-    if (audio && audio.paused) {
-      audio.play().catch(e => console.log('Autoplay blocked:', e));
-    }
-  }, { once: true });
-</script>
-
-
+<!-- YouTube autoplay embed -->
+<iframe width="0" height="0"
+  src="https://youtu.be/sElE_BfQ67s?si=B83Ng9xdYMyHKjCc"
+  frameborder="0"
+  allow="autoplay"
+  allowfullscreen
+  style="display:none;">
+</iframe>
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
