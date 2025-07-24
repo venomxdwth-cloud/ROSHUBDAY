@@ -208,10 +208,26 @@
   <div id="verification-popup">
   <div class="popup-content">
     <h2>💌 Verification Required</h2>
-    <p>Are you the most beautiful girl in the world?</p>
-    <button onclick="closePopup()">Yes, it's me! 💖</button>
+    <p id="popup-message">Are you OSHU BAVY~?</p>
+    <button onclick="handleClick()">Yes, it's me! 💖</button>
   </div>
 </div>
+<script>
+  let clickCount = 0;
+
+  function handleClick() {
+    clickCount++;
+
+    if (clickCount === 1) {
+      document.getElementById("popup-message").innerText = "Hmm...is it so?";
+    } else if (clickCount === 2) {
+      document.getElementById("popup-message").innerText = "Will you give me twenty billion kissies? UwU";
+    } else {
+      document.getElementById("verification-popup").style.display = "none";
+    }
+  }
+</script>
+
 
   <header>
     <h1>Happy Birthday Roshu 💗✨~</h1>
